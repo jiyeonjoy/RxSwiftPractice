@@ -152,3 +152,58 @@ Observable.deferred {
     print($0)
 })
 .disposed(by: disposeBag)
+
+print("------single------")
+struct SomeJSON: Decodable {
+    let name: String
+}
+
+enum JSONError: Error {
+    case decodingError
+}
+
+let json1 = """
+    {"name":"hello"}
+"""
+
+let json2 = """
+    {"my_name":"hello"}
+"""
+
+func decode(json: String) -> Single<SomeJSON> {
+    Single<SomeJSON>.create { observer in
+        let disposable = Disposables.create()
+        
+        guard let data = json.data(using: .utf8),
+              let json = try? JSONDecoder().decode(SomeJSON.self, from: data) else {
+            
+            observer(.failure(JSONError.decodingError))
+            return disposable
+        }
+        
+        observer(.success(json))
+        return disposable
+    }
+}
+
+decode(json: json1)
+    .subscribe{
+        switch $0 {
+        case .success(let json):
+            print(json.name)
+        case .failure(let error):
+            print(error)
+        }
+    }
+    .disposed(by: disposeBag)
+
+decode(json: json2)
+    .subscribe{
+        switch $0 {
+        case .success(let json):
+            print(json)
+        case .failure(let error):
+            print(error)
+        }
+    }
+    .disposed(by: disposeBag)
