@@ -41,6 +41,7 @@
 		908CDBB52A24663300488B60 /* TransformingOperatorPractice.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TransformingOperatorPractice.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		90EBA63B2A1A3668001C6B04 /* ObservableTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ObservableTest.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D8288C964574A7B41AFD5A4A /* Pods_RxSwiftPractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA52895E2A25AD1C001156D7 /* CombiningOperators.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CombiningOperators.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DAC4A24B2A175A3300EDF2E1 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC4A24E2A175A3300EDF2E1 /* RxSwiftPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftPracticeApp.swift; sourceTree = "<group>"; };
 		DAC4A2502A175A3300EDF2E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 				908CDBB32A2462F600488B60 /* SubjectPractice.playground */,
 				908CDBB42A2464E200488B60 /* FilteringOperatorPractice.playground */,
 				908CDBB52A24663300488B60 /* TransformingOperatorPractice.playground */,
+				DA52895E2A25AD1C001156D7 /* CombiningOperators.playground */,
 				DAC4A24D2A175A3300EDF2E1 /* RxSwiftPractice */,
 				DAC4A25F2A175A3400EDF2E1 /* RxSwiftPracticeTests */,
 				DAC4A2692A175A3400EDF2E1 /* RxSwiftPracticeUITests */,
