@@ -1,5 +1,6 @@
 import RxSwift
 
+// subscribe(구독) 이후 onNext 한 것만 받을 수 있음.
 print("-------publishSubject-------")
 let publishSubject = PublishSubject<String>()
 
@@ -39,6 +40,7 @@ publishSubject
 
 publishSubject.onNext("찍힐까요?")
 
+// subscribe(구독) 이후 onNext 한 것만과 그 전에 값을 가져올 수 있음. 단 에러면 못가져옴.
 print("-------behaviorSubject-------")
 enum SubjectError: Error {
     case error1
@@ -61,8 +63,9 @@ behaviorSubject.subscribe {
 .disposed(by: disposeBag)
 
 let value = try? behaviorSubject.value()
-print(value)
+print(value ?? "")
 
+// bufferSize 설정해 놓은 만큼 구독 전의 값을 가지고 올 수 있음.
 print("-------ReplaySubject-------")
 let replaySubject = ReplaySubject<String>.create(bufferSize: 2)
 
